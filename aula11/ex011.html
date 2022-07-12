@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio País</title>
+</head>
+<body>
+    <h1>Localização do seu país</h1>
+    Em que país voçê mora <input type="text" name="txtvel" id="txtvel">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar () {
+            var txtv = window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#res')
+            var país = (txtv.value)
+            
+            res.innerHTML = `Seu país atual é <strong>${país}</strong> és português`
+        }
+        if(país!='Portugal')
+        {
+            res.innerHTML = `O teu País atual é ${país} és estrangeiro`
+        }
+
+    </script>
+
+    
+</body>
+</html>
